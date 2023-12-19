@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS ve Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @keyframes zoomIn {
+   from {
+      transform: scale(0);
+   }
+   to {
+      transform: scale(1);
+   }
+}
+
+.grid-item {
+   animation: zoomIn 0.5s ease-in-out;
+   animation-fill-mode: forwards;
+}
+
+
+    </style>
+    <script>
+      // Sayfa yüklenirken veya yenilendikten sonra çalışacak kod
+      $(document).ready(function () {
+        // Navbar'ın orijinal pozisyonunu al
+        var navbarOriginalPosition = $(".navbar").offset().top;
+    
+        // Ekrandaki pencereyi dinle
+        $(window).scroll(function () {
+          // Şu anki kaydırma pozisyonunu al
+          var scrollPosition = $(window).scrollTop();
+    
+          // Eğer kaydırma pozisyonu navbar'ın orijinal pozisyonundan büyük veya eşitse
+          if (scrollPosition >= navbarOriginalPosition) {
+            // Navbar'a bir sınıf ekle (sabit pozisyon için)
+            $(".navbar").addClass("fixed-navbar");
+          } else {
+            // Navbar'dan sınıfı kaldır (normal pozisyon)
+            $(".navbar").removeClass("fixed-navbar");
+          }
+        });
+      });
+      // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        center: true,
+        margin: 25,
+        dots: true,
+        loop: true,
+        nav : false,
+        responsive: {
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+    
+(jQuery);
+
+
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var animatedContainer = $(".animated-container");
+    
+            function isElementInViewport(el) {
+                var rect = el[0].getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+    
+            function addAnimationClass() {
+                if (isElementInViewport(animatedContainer)) {
+                    animatedContainer.addClass("active");
+                }
+            }
+    
+            // Sayfa yüklendiğinde ve kullanıcı kaydırdığında animasyonu tetikle
+            addAnimationClass();
+            $(window).scroll(addAnimationClass);
+        });
+        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var imageContainer = $("#imageContainer");
+    
+            function isElementInViewport(el) {
+                var rect = el[0].getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+    
+            function addAnimationClass() {
+                if (isElementInViewport(imageContainer)) {
+                    imageContainer.addClass("zoomIn");
+                }
+            }
+    
+            // Sayfa yüklendiğinde ve kullanıcı kaydırdığında animasyonu tetikle
+            addAnimationClass();
+            $(window).scroll(addAnimationClass);
+        });
+        
+    </script>
+    
+    
+    
+
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  
+ 
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <img src="img/logo.png" alt="Image" width="40px"> &nbsp;
+      <a class="navbar-brand" href="index.html">ÇORUMLULAR AĞIR VASITA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">ANASAYFA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hakkımızda.html">HAKKIMIZDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iletişim.html" tabindex="-1" aria-disabled="false">İLETİŞİM</a>
+          </li>
+        
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+</header>
+<br> <br>
+<section class="contact section-padding">
+  <div class="container">
+      <div class="row">
+          
+          <div class="col-lg-6 col-12">
+              <h2 class="mb-4">Adres <span></span></h2>
+
+              <div class="map-container">
+                <iframe
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.5078446969633!2d38.2311318!3d38.3372263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407633c99cd569fd%3A0x1fac1095b3aa75f4!2sYak%C4%B1nca%2C%20%C3%96zsan%20Sanayi%20Sitesi%2C%2044900%20Ye%C5%9Filyurt%2FMalatya!5e0!3m2!1str!2str!4v1702746179325!5m2!1str!2str"
+                ></iframe>
+            </div>
+                  <br><br>
+          </div>
+
+          <div class="col-lg-6 col-12 mt-5 ms-auto">
+              <div class="row">
+                  <div class="col-6 border-end contact-info">
+                      <h6 class="mb-3">Çalışma Saatleri</h6> <br> 
+                      <h5> Pazartesi: 07:30-19:00</h5><br>
+                      <h5> Salı: 07:30-19:00</h5><br>
+                      <h5> Çarşamba: 07:30-19:00</h5><br>
+                      <h5> Perşembe: 07:30-19:00</h5><br>
+                      <h5> Cuma: 07:30-19:00</h5><br>
+                      <h5> Cumartesi: 07:30-19:00</h5><br>
+                      <h5> Pazar: Kapalı</h5><br>
+          </div>
+          <div div class="col-lg-5 col-6">
+            <h5>Yedek Parça Telefon Numarası: 0532 494 2574</h5> <br>
+<h5>Tamir ve bakım Telefon Numarası: 0546 257 8583</h5>
+          </div>
+
+      </div>
+  </div>
+</section>
+<br> <br> <br>
+  
+<div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+      <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+              <h4 class="text-light mb-4">Adres</h4>
+              <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Yakın Mahallesi Özsan Sanay Sitesi No:9 Yeşilyurt/Malatya</p>
+              <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0532 494 2574</p>
+             
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <h4 class="text-light mb-4">Çalışma Saatleri</h4>
+              <h6 class="text-light">Pazartesi - Cumartesi:</h6>
+              <p class="mb-4">07:00 - 19:00</p>
+              <h6 class="text-light">Pazar:</h6>
+              <p class="mb-0">Kapalı</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+              <h4 class="text-light mb-4">Servis</h4>
+              <a class="btn btn-link" href="">Motor</a>
+              <a class="btn btn-link" href="">Şanzuman</a>
+              <a class="btn btn-link" href="">Diferansiyel</a>
+              <a class="btn btn-link" href="">Bakım & Onarım</a>
+            
+          </div>
+        
+          </div>
+      </div>
+  </div>
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+  </body>
+</html>
