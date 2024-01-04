@@ -50,27 +50,27 @@
 
     </style>
     <script>
-      // Sayfa yüklenirken veya yenilendikten sonra çalışacak kod
+      
       $(document).ready(function () {
-        // Navbar'ın orijinal pozisyonunu al
+        
         var navbarOriginalPosition = $(".navbar").offset().top;
     
-        // Ekrandaki pencereyi dinle
+        
         $(window).scroll(function () {
-          // Şu anki kaydırma pozisyonunu al
+         
           var scrollPosition = $(window).scrollTop();
     
-          // Eğer kaydırma pozisyonu navbar'ın orijinal pozisyonundan büyük veya eşitse
+          
           if (scrollPosition >= navbarOriginalPosition) {
-            // Navbar'a bir sınıf ekle (sabit pozisyon için)
+            
             $(".navbar").addClass("fixed-navbar");
           } else {
-            // Navbar'dan sınıfı kaldır (normal pozisyon)
+            
             $(".navbar").removeClass("fixed-navbar");
           }
         });
       });
-      // Testimonials carousel
+     
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
